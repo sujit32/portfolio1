@@ -5,7 +5,41 @@ var typed = new Typed(".text", {
   loop: true,
 });
 
-// toggle icon navbar
+//Email js
+const contactForm = document.getElementById("contact-form"),
+  contactMessage = document.getElementById("contact-message");
+
+const sendEmail = (e) => {
+  e.preventDefault();
+  //serviceID - templateID -#form -publickey
+  emailjs
+    .sendForm(
+      "service_7go6dpi",
+      "template_51axmu4",
+      "#contact-form",
+      "2HYOWT1tJ4Xf7CoIo"
+    )
+    .then(
+      () => {
+        //show sent message
+        contactMessage.textContent = "Message sent successfully!";
+
+        //Remove message after five sec
+        setTimeout(() => {
+          contactMessage.textContent = "";
+        }, 4000);
+
+        //clear input fields
+        contactForm.reset();
+      },
+      () => {
+        contactMessage.textContent = "message not sent (service error)";
+      }
+    );
+};
+contactForm.addEventListener("submit", sendEmail);
+
+//toggle icon navbar
 
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");

@@ -38,8 +38,9 @@ section{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
-    background: transparent;
+    height: 6rem;
+    padding: 2rem 8%;
+    background: var(--snd-bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,6 +65,9 @@ section{
     text-decoration: none;
     font-weight: 700;
     margin-left: 35px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
 }
 
 #menu-icon{
@@ -78,30 +82,29 @@ section{
 
 .home{
    position: relative;
-   width: 100%;
-   justify-content: center;
-   height: 100vh;
+   width: 100%; 
+   min-height: 100vh;
    background: url(assets/bg7.jpg) no-repeat; 
    background-size: cover;
    background-position: center;
    display: flex;
    margin-top: 1px;
-   align-items: center;
-   padding: 50px 10% 0;
+   padding: 120px 15% 0;
 }
 
 .home-content{  
     align-items: center;
-    padding: 50px;
+    padding: 60px;
     text-align: left;
     max-width: 600px;
     margin: 0 auto; 
-    margin-bottom: 30px;    
+    margin-bottom: 50px;    
 }
 
 .profile-img img{
     border-radius: 50%;
     max-width: 300px;
+    overflow: hidden;
     animation: floatImage 4s ease-in-out infinite;
     border: 5px solid rgba(255, 255, 255, 0.5);
 }
@@ -163,7 +166,7 @@ section{
     font-size: 24px;
     color: #0ef;
     text-decoration: none;
-    margin: 30px 15px 30px 0;
+    margin: 30px 10px 30px 0;
     transition: color .5s ease;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
@@ -189,6 +192,7 @@ section{
     transition: color .5s ease;
     letter-spacing: .1rem;
     opacity: 0;
+    cursor: pointer;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
     box-shadow: 0 0 1px #0ef,
@@ -272,12 +276,12 @@ section{
 }
 
 .experience-content h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .experience-content p {
     font-size: 1.2rem;
-    margin: 2rem 0 3rem;
+    margin: 1rem 0 2rem;
 }
 
 .thesis {
@@ -332,6 +336,7 @@ section{
 .contact form .input-box input,
 .contact form textarea{
     width: 100%;
+    height: 5rem;
     padding: 1.5rem;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -404,7 +409,10 @@ section{
         padding: 7rem;
     }
 
+
     .thesis{
+        display: flex;
+        flex-direction: column;
         padding-bottom: 7rem;
     }
     .contact{
@@ -468,19 +476,19 @@ section{
     }
 
     .experience-img img{
-        width: 50vw;
+        width: 100%;
         margin-top: 4rem;
     }
 
     .experience-content h2{
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
     .thesis-img img{
-        width: 50vw;
+        width: 100%;
         margin-top: 4rem;
-    }
     
+    }
     .experience-content{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -492,17 +500,16 @@ section{
     }
 
     .experience-img img{
-        width: 40vw;
         margin-top: 4rem;
     }
 
     .profile-img img{
-        width: 40vw;
+        width: 100%;
         margin-top: 8rem;
     }
     
     .thesis-img img{
-        width: 50vw;
+        width: 100%;
         margin-top: 4rem;
     }
 }

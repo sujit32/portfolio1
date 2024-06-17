@@ -13,11 +13,13 @@
         <link rel="stylesheet" href="style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>;
+
     </head>
     <body>
         <!--Header Design-->
         <header class="header">
-            <a href="#" class="logo">Portfolio</a>
+            <a href="#home" class="logo">Portfolio</a>
 
             <i class="fa-solid fa-bars" id="menu-icon"></i>
 
@@ -39,7 +41,7 @@
                     Being knowledgeable in the medical eld is an ongoing process and
                     I am always seeking opportunities to grow and develop myself by
                     experiencing things in my eld, nursing. I am flexible and adapt to situations accordingly. I am passionate about my work, and being a student nurse was very challenging, requiring time management and willpower. Each shift involved dealing with patients, understanding and encouraging them, and interacting with visitors, all while managing my studies. </p>
-                <div class="home-social">
+                <div class="home-social" style="display:flex; justify-content: space-around; align-items: center;">
                     <a href="https://www.facebook.com/neopaney.astha?mibextid=ZbWKwL" style="--i:6"><i class='bx bxl-facebook' ></i></a>
                     <a href="https://www.instagram.com/asthaneopaney?igsh=MWw0N2kzeGVrendnbQ==" style="--i:7"><i class='bx bxl-instagram' ></i></a>
                     <a href="https://www.linkedin.com/in/neupane-astha-1ba43a198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="--i:8"><i class='bx bxl-linkedin' ></i></a>
@@ -81,7 +83,7 @@
                     The study findings indicated that the majority of the patients, 47.5%, were in the age group above 51 years. Additionally, 47.5% were male, 72.5% were Hindu, 65% were employed, and 42.5% were educated. The pretest results showed that 47.5% of patients had average knowledge, while 52.5% had poor knowledge. After providing the self-instruction module, the majority of patients (80%) demonstrated excellent knowledge.
                     Researchers identified the effectiveness of the self-instructional module through an unpaired t-test, which yielded a value of 21.23 at the 0.05 significance level. The study results also indicated that knowledge assessment scores were dependent on selected demographic variables.</p>
                 <div class="btn-box">
-                    <a href="assets/thesis final research paper.pdf" ><i class="fa-solid fa-download"></i> &nbsp;Thesis</a> 
+                    <a href="assets/thesis final research paper.pdf" ><i class="fa-solid fa-download"></i> &nbsp;My Thesis</a> 
                 </div>
             </div>
         </section>
@@ -89,18 +91,19 @@
 
         <!--Contact Section-->
         <section class="contact" id="contact">
-            <form action="#">
+            <form id="contact-form">
                 <h2 class="heading">Contact <span>Me</span></h2>
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email Address">
+                    <input type="text" name="user_name" placeholder="Full Name" required>
+                    <input type="email" name="user_email" placeholder="Email Address" required>
                 </div>
 
-                <div class="input-box">
+                <!-- <div class="input-box">
                     <input type="number" placeholder="Mobile Number">
                     <input type="text" placeholder="Subject">
-                </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                </div> -->
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <p class="cont" id="contact-message"></p>
                 <input type="submit" value="Send Message" class="btn-box">
             </form>
         </section>
