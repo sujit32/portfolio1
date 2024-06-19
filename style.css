@@ -363,7 +363,7 @@ section {
 }
 
 .footer-text {
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 .footer-iconTop {
@@ -381,7 +381,7 @@ section {
 }
 
 .footer-iconTop a i {
-  font-size: 2.4rem;
+  font-size: 1rem;
   color: var(--snd-bg-color);
 }
 
